@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coment</title>
+</head>
+<body>
+    <h2>Add your commnet, please !!</h2>
+    <section>
+        <h4>Your commnets</h4>
+        <div id="commnet-container">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus officia maiores et! Iure eligendi ad facilis molestiae dolorum deleniti dolore accusamus cupiditate aliquam, sunt inventore dignissimos sit atque distinctio explicabo ratione numquam voluptate sed ut facere est. Aspernatur nostrum eius cum dolore delectus quae hic inventore! Ullam ad vitae praesentium?</p>
+            <p>Explicabo in culpa ducimus hic consequatur, ipsum similique harum magnam quibusdam reprehenderit? Provident laudantium maiores enim nihil recusandae corrupti placeat fugit culpa nisi vel tempora, illum asperiores odio, dicta quo blanditiis ullam tempore voluptates nostrum facilis fugiat adipisci aliquid vitae? Repellat, sapiente beatae delectus blanditiis assumenda corporis repellendus neque ipsam.</p>
+        
+        </div>
+
+        <div>
+            <textarea name="" id="new-comment" cols="60" rows="4"></textarea><br>
+            <button id="submit-comment">post</button>
+        </div>
+    </section>
+
+    <script>
+
+        // 1.add button enent handler
+        document.getElementById('submit-comment').addEventListener('click', function(){
+
+            // 2. get user commnet
+           const commentBox = document.getElementById('new-comment');
+           //const userComment = commentBox.value;
+
+           // 3. create comment paragraph
+           const newCommnet = document.createElement('p');
+           newCommnet.innerText = commentBox.value;
+
+           // 4. append the commnet
+
+           const commneContainer = document.getElementById('commnet-container');
+            commneContainer.appendChild(newCommnet);
+            // 5. clean the commnet box
+            commentBox.value = '';
+        })
+    </script>
+</body>
+</html>
